@@ -1,0 +1,38 @@
+.splash {
+  width: 1200px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navButton {
+  text-decoration: none;
+}
+
+.lower {
+  display: block;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
+
+.navBox {
+  border: 1px solid gray;
+  background-color: #95C9D3;
+  display: inline-block;
+  width: 225px;
+  height: 150px;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+h2 {
+  text-decoration: none;
+  color: white;
+  font-style: italic;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 75px;
+}

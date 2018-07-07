@@ -3,7 +3,6 @@ h1 {
   color: #33656F;
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 250%;
-  font-style: italic;
 }
 
 h2, h3 {

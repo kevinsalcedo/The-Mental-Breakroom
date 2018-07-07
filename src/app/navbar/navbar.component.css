@@ -1,0 +1,25 @@
+.navHead {
+  display: block;
+  border-bottom: 1px solid black;
+}
+
+.links {
+  float:right;
+  width: auto;
+}
+.linkHead {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  padding: 2em;
+  display: inline-block;
+  text-decoration: none;
+  color: ##33656F;
+}
+
+.linkHead:hover {
+  color: red;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
