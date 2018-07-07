@@ -14,7 +14,6 @@
 
 .lower {
   display: block;
-  height: auto;
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
@@ -25,9 +24,9 @@
   background-color: #95C9D3;
   display: inline-block;
   width: 225px;
-  height: 150px;
-  margin-left: 80px;
-  margin-right: 80px;
+  height: 125px;
+  margin-left: 85px;
+  margin-right: 85px;
   box-shadow: 1px 3px 2px #888888
 }
 
@@ -38,4 +37,5 @@ h2 {
   text-align: center;
   vertical-align: middle;
   line-height: 75px;
+  font-weight: normal;
 }
