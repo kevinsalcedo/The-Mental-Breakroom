@@ -1,0 +1,16 @@
+.headshot {
+  height: 250px;
+  width: 250px;
+  float: left;
+}
+
+.blurb {
+  float: right;
+  display: inline;
+  width: 900px;
+}
+
+.contactMe {
+  text-align: center;
+  float: left;
+}
