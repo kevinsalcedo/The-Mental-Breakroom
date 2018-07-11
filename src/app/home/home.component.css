@@ -1,5 +1,5 @@
 .splash {
-  width: 1200px;
+  width: 75em;
   height: auto;
   display: block;
   margin-left: auto;
@@ -29,6 +29,10 @@
   margin-right: 85px;
   box-shadow: 1px 3px 2px #888888
 }
+
+.navBox:hover {
+  background-color: #4AB3C7;
+} 
 
 h2 {
   text-decoration: none;

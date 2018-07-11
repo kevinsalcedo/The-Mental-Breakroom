@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { BlankComponent } from './blank/blank.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AppRoutingModule } from './/app-routing.module';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    BlankComponent
   ],
   imports: [
     BrowserModule,
