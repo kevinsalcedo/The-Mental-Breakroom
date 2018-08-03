@@ -1,0 +1,26 @@
+<div class="header">
+  <h1>What's Your Story?</h1>
+</div>
+<div class="sorting">
+  <div class="sortOptions">
+    <h2>Sorting options will go here.</h2>
+  </div>
+  <a class="navButton" routerLink ="/newStory">
+    <div class="newStory">
+      <h2>Submit Your Own Story</h2>
+    </div>
+  </a>   
+</div>
+<div class="listings">
+  <div class="storyListing" *ngFor="let story of stories">
+    <a routerLink="/story/{{story.id}}">
+      <span class="badge">
+        <div *ngIf="story.author; then withAuthor else withoutAuthor"></div>
+        <ng-template #withAuthor><h3>{{story.topic}} - {{story.author}}</h3></ng-template>
+        <ng-template #withoutAuthor><h3>{{story.topic}} - Anonymous</h3></ng-template>
+        <h4> Date created: {{story.date | date}}</h4>
+      </span>
+    </a>
+  </div>
+</div>
+

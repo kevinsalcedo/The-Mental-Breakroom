@@ -10,6 +10,10 @@ import { ContactComponent } from './contact/contact.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { BlankComponent } from './blank/blank.component';
 import { StoryFormComponent } from './story-form/story-form.component';
+import { StoriesComponent } from './stories/stories.component';
+import { StoryDetailComponent } from './story-detail/story-detail.component';
+import { DisordersComponent } from './disorders/disorders.component';
+import { DisorderDetailComponent } from './disorder-detail/disorder-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { StoryFormComponent } from './story-form/story-form.component';
     FooterComponent,
     ContactComponent,
     BlankComponent,
-    StoryFormComponent
+    StoryFormComponent,
+    StoriesComponent,
+    StoryDetailComponent,
+    DisordersComponent,
+    DisorderDetailComponent
   ],
   imports: [
     BrowserModule,
