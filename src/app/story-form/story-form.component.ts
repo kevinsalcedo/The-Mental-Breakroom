@@ -8,7 +8,7 @@ import { Story } from '../story';
 })
 export class StoryFormComponent {
 
-  model = new Story(18, 'On Depression', 'This is a test story.', Date.now(), 'Kevin');
+  model = new Story(1, '', '', Date.now(), '');
 
   submitted = false;
 

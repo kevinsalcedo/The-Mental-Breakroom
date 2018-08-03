@@ -13,6 +13,15 @@ textarea {
   height: 100px;
 }
 
+.alert, .alert-danger {
+  background-color: #ef9d9b;
+  border-radius: 3px;
+  width: 150px;
+  height: 30px;
+  font-size: small;
+  line-height: 200%;
+}
+
 .ng-valid[required], .ng-valid.required {
   border-left: 5px solid #42A948;
 }
