@@ -9,7 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { BlankComponent } from './blank/blank.component';
-import { SubmitStoryComponent } from './submit-story/submit-story.component';
+import { StoryFormComponent } from './story-form/story-form.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { SubmitStoryComponent } from './submit-story/submit-story.component';
     FooterComponent,
     ContactComponent,
     BlankComponent,
-    SubmitStoryComponent
+    StoryFormComponent
   ],
   imports: [
     BrowserModule,

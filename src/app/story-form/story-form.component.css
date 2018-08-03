@@ -1,0 +1,23 @@
+
+input[type=text], textarea {
+  border: 1px solid gray;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: block;
+  width: 150px;
+  height: 30px;
+}
+
+textarea {
+  width: 250px;
+  height: 100px;
+}
+
+.ng-valid[required], .ng-valid.required {
+  border-left: 5px solid #42A948;
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442;
+}
+
