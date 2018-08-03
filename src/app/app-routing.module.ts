@@ -4,11 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { BlankComponent } from './blank/blank.component';
+import { SubmitStoryComponent } from './submit-story/submit-story.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'blank', component: BlankComponent }
+  { path: 'blank', component: BlankComponent },
+  { path: 'story', component: SubmitStoryComponent }
 ];
 
 @NgModule({
