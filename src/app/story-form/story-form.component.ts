@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Story } from '../story';
 import { ApiService } from '../api.service';
 import { Router } from '@angular/router';
@@ -8,13 +8,20 @@ import { Router } from '@angular/router';
   templateUrl: './story-form.component.html',
   styleUrls: ['./story-form.component.css']
 })
-export class StoryFormComponent {
+export class StoryFormComponent implements OnInit {
 
   model = new Story(1, '', '', Date.now(), '');
+  private disorders: Array<object> = [];
 
   submitted = false;
 
   constructor(private router: Router, private apiService: ApiService) {}
+
+  ngOnInit() {
+    this.apiService.getDisorders().subscribe((data: Array<object>) => {
+      this.disorders = data;
+    });
+  }
 
   onSubmit() {
     this.submitted = true;

@@ -13,6 +13,10 @@ export class ApiService {
     return this.httpClient.get(`${this.API_URL}/disorders/?format=json`);
   }
 
+  getDisorder(disorderId) {
+    return this.httpClient.get(`${this.API_URL}/disorders/${disorderId}`);
+  }
+
   getStories() {
     return this.httpClient.get(`${this.API_URL}/stories/?format=json`);
   }

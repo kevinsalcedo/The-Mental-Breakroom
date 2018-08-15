@@ -8,7 +8,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./story-detail.component.css']
 })
 export class StoryDetailComponent implements OnInit {
-  storyId = "hello there";
+  storyId = "-1";
   private story: object = {};
 
   constructor(private urlPath: Location, private apiService: ApiService) { }
