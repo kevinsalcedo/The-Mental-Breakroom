@@ -13,11 +13,11 @@
 </div>
 <div class="listings">
   <div class="storyListing" *ngFor="let story of stories">
-    <a routerLink="/story/{{story.id}}">
+    <a routerLink="/stories/{{story.id}}">
       <span class="badge">
         <div *ngIf="story.author; then withAuthor else withoutAuthor"></div>
-        <ng-template #withAuthor><h3>{{story.topic}} - {{story.author}}</h3></ng-template>
-        <ng-template #withoutAuthor><h3>{{story.topic}} - Anonymous</h3></ng-template>
+        <ng-template #withAuthor><h3>{{story.title}} - {{story.author}}</h3></ng-template>
+        <ng-template #withoutAuthor><h3>{{story.title}} - Anonymous</h3></ng-template>
         <h4> Date created: {{story.date | date}}</h4>
       </span>
     </a>

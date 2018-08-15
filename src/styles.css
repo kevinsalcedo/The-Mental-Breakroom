@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
 h1 { 
   color: #33656F;
   font-family: "Helvetica Neue", Arial, sans-serif;

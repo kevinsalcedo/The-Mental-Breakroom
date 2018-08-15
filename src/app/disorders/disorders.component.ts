@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Disorder } from '../disorder';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-disorders',
@@ -8,22 +9,17 @@ import { Disorder } from '../disorder';
 })
 export class DisordersComponent implements OnInit {
 
-  disorders = [
-    [new Disorder(1, 'Unipolar Depression'),
-     new Disorder(2, 'Bipolar Depression'),
-     new Disorder(3, 'Generalized Anxiety'),
-      new Disorder(4, 'Schizophrenia')
-    ],
-    [new Disorder(5, 'Post Traumatic Stress Disroder'),
-     new Disorder(6, 'Attention Deficit/Hyperactivity Disorder'),
-     new Disorder(7, 'Panic Disorder'),
-     new Disorder(8, 'Anorexia')
-    ]
-  ];
+  private disorder_list: Array<object> = [];
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
+    this.getDisorders();
   }
 
+  public getDisorders() {
+    this.apiService.getDisorders().subscribe((data: Array<object>) => {
+      this.disorder_list = data;
+    });
+  }
 }
