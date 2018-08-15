@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'blank', component: BlankComponent },
   { path: 'newStory', component: StoryFormComponent },
   { path: 'stories', component: StoriesComponent },
-  { path: 'story/:id', component: StoryDetailComponent},
+  { path: 'stories/:id', component: StoryDetailComponent},
   { path: 'disorders', component: DisordersComponent },
   { path: 'disorder/:id', component: DisorderDetailComponent}
 ];

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-story-detail',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./story-detail.component.css']
 })
 export class StoryDetailComponent implements OnInit {
+  storyId = "hello there";
+  private story: object = {};
 
-  constructor() { }
+  constructor(private urlPath: Location, private apiService: ApiService) { }
 
   ngOnInit() {
+    this.storyId = this.urlPath.path().replace('/stories/','');
   }
 
 }
