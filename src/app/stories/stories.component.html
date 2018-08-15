@@ -18,7 +18,7 @@
         <div *ngIf="story.author; then withAuthor else withoutAuthor"></div>
         <ng-template #withAuthor><h3>{{story.title}} - {{story.author}}</h3></ng-template>
         <ng-template #withoutAuthor><h3>{{story.title}} - Anonymous</h3></ng-template>
-        <h4> Date created: {{story.date | date}}</h4>
+        <h4> Date created: {{story.date_created | date}}</h4>
       </span>
     </a>
   </div>

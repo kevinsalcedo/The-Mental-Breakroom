@@ -4,6 +4,7 @@ export class Story {
     public topic: string,
     public content: string,
     public date: number,
-    public author?: string
+    public disorder: number,
+    public author?: string,
   ) { }
 }

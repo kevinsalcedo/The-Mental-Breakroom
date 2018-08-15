@@ -1,16 +1,14 @@
 <div class="container">
     <h1>Submit Your Story</h1>
+    <p class="disclaimer">* denotes required Field</p>
     <form (ngSubmit)="onSubmit()" #storyForm="ngForm">
       <div class="form-group">
         <label for="author">Name</label>
         <input type="text" class="form-control" id="author" name="author" [(ngModel)]="model.author">
-        <select class="form-control" id="disorders" required>
-          <option *ngFor="let disorder of disorders" [value]="disorder">{{disorder.name}}</option>
-        </select>
       </div>
  
       <div class="form-group">
-        <label for="topic">Topic</label>
+        <label for="topic">Topic<span class="disclaimer">*</span></label>
         <input type="text" class="form-control" id="topic" name="topic" name="topic" [(ngModel)]="model.topic" required #topic="ngModel">
         <div [hidden]="topic.valid || topic.pristine" class="alert alert-danger">
           Topic is required
@@ -18,13 +16,25 @@
       </div>
 
       <div class="form-group">
-        <label for="content">Enter your story here</label>
+        <label for="content">Enter your story here<span class="disclaimer">*</span></label>
         <textarea class="form-control" id="content" name="content" name="content" [(ngModel)]="model.content" required #content="ngModel"></textarea>
         <div [hidden]="content.valid || content.pristine" class="alert alert-danger">
           Body is required
         </div>
       </div>
- 
+
+      <div class="form-group">
+        <label for="disorders">Area<span class="disclaimer">*</span></label>
+        <select class="form-control" id="disorders" name="disorders" required #disorder="ngModel" [(ngModel)]="model.disorder">
+          <option *ngFor="let disorder of disorders" [value]="disorder.id" id="disorder" name="disorder">{{disorder.name}}</option>
+        </select>
+        <div [hidden]="disorder.valid || disorder.pristine" class="alert alert-danger">
+          Disorder is required
+        </div>
+      </div>
+      
+      <br>
+
       <button type="submit" class="btn btn-success" [disabled]="!storyForm.form.valid">Submit</button>
  
     </form>

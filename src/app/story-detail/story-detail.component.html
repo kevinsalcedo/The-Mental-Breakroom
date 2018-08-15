@@ -9,6 +9,7 @@
 <ng-template #withoutAuthor>
   <h2>Anonymous</h2>
 </ng-template>
+<h3>{{disorder.name}}</h3>
 </div>
 <div class = "content" *ngIf="story">
   <p>{{story.content}}</p> 
@@ -16,4 +17,3 @@
 <div class="sidebar">
   
 </div>
-<a class="linkHead" routerLink="/">Home Page</a>

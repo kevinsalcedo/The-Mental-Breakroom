@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class StoryFormComponent implements OnInit {
 
-  model = new Story(1, '', '', Date.now(), '');
+  model = new Story(1, '', '', Date.now(), 1, '');
   private disorders: Array<object> = [];
 
   submitted = false;
@@ -29,7 +29,8 @@ export class StoryFormComponent implements OnInit {
     var newStory = {
       title: this.model.topic,
       content: this.model.content,
-      author: this.model.author
+      author: this.model.author,
+      disorder: this.model.disorder
     }
     this.apiService.createStory(newStory).subscribe((response) => {
       console.log(response);
@@ -38,7 +39,7 @@ export class StoryFormComponent implements OnInit {
   }
 
   newStory() {
-    this.model = new Story(42, '', '', Date.now(), '');
+    this.model = new Story(42, '', '', Date.now(), 1, '');
   }
 
   get diagnostic() { return JSON.stringify(this.model); }
