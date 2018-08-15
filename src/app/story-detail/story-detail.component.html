@@ -1,2 +1,19 @@
-<h2>This is the story detail page, showing full info on the story submitted</h2>
+<div class="header" *ngIf="story">
+  <h1>
+    {{story.title}}
+  </h1>
+  <div *ngIf="story.author; then withAuthor else withoututhor"></div>
+<ng-template #withAuthor>
+  <h2>{{story.author}}</h2> 
+</ng-template>
+<ng-template #withoutAuthor>
+  <h2>Anonymous</h2>
+</ng-template>
+</div>
+<div class = "content" *ngIf="story">
+  <p>{{story.content}}</p> 
+</div>
+<div class="sidebar">
+  
+</div>
 <a class="linkHead" routerLink="/">Home Page</a>

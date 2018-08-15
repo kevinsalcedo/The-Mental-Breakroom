@@ -17,6 +17,10 @@ export class ApiService {
     return this.httpClient.get(`${this.API_URL}/stories/?format=json`);
   }
 
+  getStory(storyId) {
+    return this.httpClient.get(`${this.API_URL}/stories/${storyId}`);
+  }
+
   createStory(story) {
     return this.httpClient.post(`${this.API_URL}/stories/`, story);
   }

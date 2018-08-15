@@ -15,6 +15,12 @@ export class StoryDetailComponent implements OnInit {
 
   ngOnInit() {
     this.storyId = this.urlPath.path().replace('/stories/','');
+    this.getStory(this.storyId);
   }
 
+  public getStory(storyId) {
+    this.apiService.getStory(this.storyId).subscribe((data: Array<object>) => {
+      this.story = data;
+    });
+  }
 }
