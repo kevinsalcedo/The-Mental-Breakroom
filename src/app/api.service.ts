@@ -5,27 +5,29 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiService {
+  LOCAL_URL = 'http://localhost:8000';
   API_URL = 'http://mbdb-env.bwzm9cseur.us-east-1.elasticbeanstalk.com';
+  URL = LOCAL_URL;
 
   constructor(private httpClient: HttpClient) { }
 
   getDisorders() {
-    return this.httpClient.get(`${this.API_URL}/disorders/?format=json`);
+    return this.httpClient.get(`${this.URL}/disorders/?format=json`);
   }
 
   getDisorder(disorderId) {
-    return this.httpClient.get(`${this.API_URL}/disorders/${disorderId}/?format=json`);
+    return this.httpClient.get(`${this.URL}/disorders/${disorderId}/?format=json`);
   }
 
   getStories() {
-    return this.httpClient.get(`${this.API_URL}/stories/?format=json`);
+    return this.httpClient.get(`${this.URL}/stories/?format=json`);
   }
 
   getStory(storyId) {
-    return this.httpClient.get(`${this.API_URL}/stories/${storyId}/?format=json`);
+    return this.httpClient.get(`${this.URL}/stories/${storyId}/?format=json`);
   }
 
   createStory(story) {
-    return this.httpClient.post(`${this.API_URL}/stories/?format=json`, story);
+    return this.httpClient.post(`${this.URL}/stories/?format=json`, story);
   }
 }
