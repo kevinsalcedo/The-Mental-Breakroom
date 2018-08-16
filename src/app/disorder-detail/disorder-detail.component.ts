@@ -8,13 +8,13 @@ import { ApiService } from '../api.service';
   styleUrls: ['./disorder-detail.component.css']
 })
 export class DisorderDetailComponent implements OnInit {
-  disorderId = "-1";
+  disorderId = '-1';
   private disorder: object = {};
 
   constructor(private urlPath: Location, private apiService: ApiService) { }
 
   ngOnInit() {
-    this.disorderId = this.urlPath.path().replace('/disorders/','');
+    this.disorderId = this.urlPath.path().replace('/disorders/', '');
     this.getDisorder(this.disorderId);
   }
 

@@ -17,7 +17,7 @@ export class DisordersComponent implements OnInit {
   ngOnInit() {
     this.getDisorders();
 
-    for(var i = 0; i < this.disorder_list.length; i+= 4) {
+    for (let i = 0; i < this.disorder_list.length; i += 4) {
      this.disorder_grid[this.disorder_grid.length] = this.disorder_list.slice(i, i + 4);
     }
   }
@@ -26,10 +26,9 @@ export class DisordersComponent implements OnInit {
     this.apiService.getDisorders().subscribe((data: Array<object>) => {
       this.disorder_list = data;
 
-      for(var i = 0; i < data.length; i+= 4) {
-        this.disorder_grid[this.disorder_grid.length] = data.slice(i,i+4);
+      for (let i = 0; i < data.length; i += 4) {
+        this.disorder_grid[this.disorder_grid.length] = data.slice(i, i + 4);
       }
     });
   }
-
 }

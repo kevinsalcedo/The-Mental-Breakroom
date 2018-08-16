@@ -26,15 +26,17 @@ export class StoryFormComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
 
-    var newStory = {
+    const newStory = {
       title: this.model.topic,
       content: this.model.content,
       author: this.model.author,
       disorder: this.model.disorder
-    }
+    };
+
     this.apiService.createStory(newStory).subscribe((response) => {
       console.log(response);
     });
+
     this.router.navigateByUrl('/stories');
   }
 

@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class ApiService {
   LOCAL_URL = 'http://localhost:8000';
   API_URL = 'http://mbdb-env.bwzm9cseur.us-east-1.elasticbeanstalk.com';
-  URL = LOCAL_URL;
+  URL = this.API_URL;
 
   constructor(private httpClient: HttpClient) { }
 

@@ -35,7 +35,7 @@ import { DisorderDetailComponent } from './disorder-detail/disorder-detail.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, 
+    FormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
