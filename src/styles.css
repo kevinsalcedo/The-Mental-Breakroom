@@ -7,7 +7,7 @@ h1 {
   font-style: italic;
 }
 
-h2, h3 {
+h2, h3, h4, p, li {
   color: #33656F;
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-weight: lighter;
