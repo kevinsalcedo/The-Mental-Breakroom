@@ -9,6 +9,7 @@
   width: auto;
   margin-left: 225px;
   margin-right: 50px;
+  font-weight: bold;
 }
 
 .contactMe {
@@ -16,6 +17,7 @@
   float: left;
   height: 325px;
   margin: 25px;
+  font-weight: bold;
 }
 
 .info {
