@@ -1,6 +1,6 @@
 .header, .sorting {
   text-align:  center;
-  background-color: teal;
+  background-color: #119DA4;
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
@@ -39,7 +39,7 @@
 }
 
 .disorderListing:hover {
-  box-shadow: 1px 2px 2px #4AB3C7;
+  box-shadow: 1px 2px 2px #7A93AC;
 }
 
 h3 {
@@ -57,4 +57,29 @@ table {
   margin-right: auto;
   border-spacing: 25px;
   border-collapse: separate;
+}
+
+.listings {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  height: auto;
+  border: 1px solid black;
+}
+
+.postListing {
+  border: 1px solid black;
+  width: 400px;
+  height: auto;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.postListing:hover {
+  box-shadow: 1px 2px 2px #7A93AC;
+}
+
+h4 {
+  color: #119DA4;
 }

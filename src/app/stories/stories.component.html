@@ -1,5 +1,9 @@
 <div class="header">
   <h1>What's Your Story?</h1>
+  <hr/>
+  <h3 class="caption">
+    Everyone's has a story behind them - something that has shaped them into the person they are today. Both the good and the bad, the joyful and the tragic, everything we have gone through has affected us in some way. Here is a place for people to share their own experiences, because all too often we don't see how deep and complex each person is. 
+  </h3>
 </div>
 <div class="sorting">
   <div class="sortOptions">
@@ -12,6 +16,7 @@
   </a>   
 </div>
 <div class="listings">
+  <h2>User Submitted Stories</h2>
   <div class="storyListing" *ngFor="let story of stories">
     <a routerLink="/stories/{{story.id}}">
       <span class="badge">

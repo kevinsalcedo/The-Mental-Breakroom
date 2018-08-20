@@ -1,0 +1,84 @@
+.header, .sorting {
+  text-align: center;
+  background-color: #119DA4;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  height: auto;
+}
+
+.header h1, .sorting h2 {
+  color: white;
+}
+
+.sortOptions, .newPost {
+  width: 200px;
+  display: inline-block;
+  margin: 10px;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+.newPost {
+  background-color: #95C9D3;
+}
+
+.newPost:hover {
+  background-color: #7A93AC;
+}
+
+.sortOptions {
+  border: 1px solid white;
+  width: 75%;
+}
+
+.listings {
+  margin: 2%;
+  border-radius: 10px;
+  height: auto;
+  width: 60%;
+  float: left;
+}
+
+.postListing {
+  width: 90%;
+  height: auto;
+  padding: 5px;
+  margin: 5px;
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+
+.postListing:hover {
+  box-shadow: 1px 2px 2px #7A93AC;
+}
+
+h3, h2 {
+  font-weight: bold;
+  font-style: italic;
+}
+
+h4 {
+  color: #119DA4;
+  font-weight: bold;
+}
+
+.sidebar {
+  padding: 2%;
+  margin: 2%;
+  height: auto;
+  border-left: 1px solid black;
+  width: 20%;
+  float: right;
+}
+
+a {
+  text-decoration: none;
+}
+
+.caption {
+  color: white;
+  font-style: normal;
+  font-weight: normal;
+}
+

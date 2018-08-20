@@ -2,27 +2,42 @@
   <h1>
     {{disorder.name}}
   </h1>
+  <hr/>
+  <h3 class="caption">
+    Here you'll find personal experiences and any questions regarding {{disorder.name}}, as well as various other resources that you may find helpful.
+  </h3>
+</div>
+<div class="sorting">
+  <div class="sortOptions">
+    <h2>Sorting options will go here.</h2>
+  </div>
+  <a class="navButton" routerLink="/newPost">
+    <div class="newPost">
+      <h2>Create a Post</h2>
+    </div>
+  </a>
 </div>
 
-<div class="content" *ngIf="posts">
-  <ul>
-    <li class="posts" *ngFor="let post of posts">
-      <a routerLink="/blogposts/{{post.id}}">
-        <h4>{{post.title}}</h4>
-        <p>{{post.author}}</p>
-        <p>{{post.content}}</p>
-      </a>
-    </li>
-  </ul>
+<div class="listings">
+  <h2>{{disorder.name}} Related Posts</h2>
+  <div class="postListing" *ngFor="let post of posts">
+    <a routerLink="/blogposts/{{post.id}}">
+      <span class="badge">
+        <h3>{{post.title}}</h3>
+        <h4>{{post.author}}</h4>
+        <h4>{{post.content}}</h4>
+      </span>
+    </a>
+  </div>
 </div>
 <div class="sidebar">
-  <h4>Local Resources</h4> 
-  <ul>
-    <li class="localResources" *ngFor="let resource of resources">
-      <a routerLink="/localresources/{{resource.id}}">
-        {{resource.name}} 
-      </a> 
-    </li>
-  </ul>
-  <h4>Coping Strategies</h4>
+  <h3>Local Resources</h3> 
+  <div class="localResources" *ngFor="let resource of resources">
+    <a routerLink="/localresources/{{resource.id}}">
+      <span class="badge">
+        <h4>{{resource.name}}</h4> 
+      </span>
+    </a> 
+  </div>
+  <h3>Coping Strategies</h3>
 </div>
