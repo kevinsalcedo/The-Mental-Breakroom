@@ -53,7 +53,7 @@
   box-shadow: 1px 2px 2px #7A93AC;
 }
 
-h3, h2 {
+h3, .listTitle {
   font-weight: bold;
   font-style: italic;
 }

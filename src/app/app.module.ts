@@ -20,6 +20,7 @@ import { DisorderDetailComponent } from './disorder-detail/disorder-detail.compo
 import { BlogPostDetailComponent } from './blog-post-detail/blog-post-detail.component';
 import { LocalResourceDetailComponent } from './local-resource-detail/local-resource-detail.component';
 import { GeneralResourcesComponent } from './general-resources/general-resources.component';
+import { PostFormComponent } from './post-form/post-form.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { GeneralResourcesComponent } from './general-resources/general-resources
     DisorderDetailComponent,
     BlogPostDetailComponent,
     LocalResourceDetailComponent,
-    GeneralResourcesComponent
+    GeneralResourcesComponent,
+    PostFormComponent
   ],
   imports: [
     BrowserModule,

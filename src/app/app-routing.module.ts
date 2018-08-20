@@ -12,6 +12,7 @@ import { DisorderDetailComponent } from './disorder-detail/disorder-detail.compo
 import { BlogPostDetailComponent } from './blog-post-detail/blog-post-detail.component';
 import { LocalResourceDetailComponent } from './local-resource-detail/local-resource-detail.component';
 import { GeneralResourcesComponent } from './general-resources/general-resources.component';
+import { PostFormComponent } from './post-form/post-form.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'disorders/:id', component: DisorderDetailComponent },
   { path: 'blogposts/:id', component: BlogPostDetailComponent },
   { path: 'localresources/:id', component: LocalResourceDetailComponent },
-  { path: 'resources', component: GeneralResourcesComponent }
+  { path: 'resources', component: GeneralResourcesComponent },
+  { path: 'newPost', component: PostFormComponent }
 ];
 
 @NgModule({

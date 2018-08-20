@@ -1,7 +1,7 @@
 <div class="container">
-    <h1>Submit Your Story</h1>
+    <h1>Create a Post</h1>
     <p class="disclaimer">* denotes required Field</p>
-    <form (ngSubmit)="onSubmit()" #storyForm="ngForm">
+    <form (ngSubmit)="onSubmit()" #postForm="ngForm">
       <div class="form-group">
         <label for="author"><p>Name</p></label>
         <input type="text" class="form-control" id="author" name="author" [(ngModel)]="model.author">
@@ -16,7 +16,7 @@
       </div>
 
       <div class="form-group">
-        <label for="content"><p>Enter your story here<span class="disclaimer">*</span></p></label>
+        <label for="content"><p>Enter post body here<span class="disclaimer">*</span></p></label>
         <textarea class="form-control" id="content" name="content" name="content" [(ngModel)]="model.content" required #content="ngModel"></textarea>
         <div [hidden]="content.valid || content.pristine" class="alert alert-danger">
           Body is required
@@ -25,7 +25,7 @@
       </div>
 
       <div class="form-group">
-        <label for="disorders">Area<span class="disclaimer">*</span></label>
+        <label for="disorders"><p>Area<span class="disclaimer">*</span></p></label>
         <select class="form-control" id="disorders" name="disorders" required #disorder="ngModel" [(ngModel)]="model.disorder">
           <option *ngFor="let disorder of disorders" [value]="disorder.id" id="disorder" name="disorder">{{disorder.name}}</option>
         </select>
@@ -36,7 +36,7 @@
       
       <br>
 
-      <button type="submit" class="btn btn-success" [disabled]="!storyForm.form.valid || content.value.length > 5000 || topic.value.length > 50">Submit</button>
+      <button type="submit" class="btn btn-success" [disabled]="!postForm.form.valid || content.value.length > 5000 || topic.value.length > 50">Submit</button>
  
     </form>
 </div>

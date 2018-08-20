@@ -34,10 +34,9 @@ export class StoryFormComponent implements OnInit {
     };
 
     this.apiService.createStory(newStory).subscribe((response) => {
-      console.log(response);
+      this.router.navigateByUrl(`/disorders/${newStory.disorder}`);
     });
 
-    this.router.navigateByUrl('/stories');
   }
 
   newStory() {
