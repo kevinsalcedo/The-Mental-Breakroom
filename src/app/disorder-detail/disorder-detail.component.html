@@ -4,8 +4,25 @@
   </h1>
 </div>
 
-<div class="content" *ngIf="story">
+<div class="content" *ngIf="posts">
+  <ul>
+    <li class="posts" *ngFor="let post of posts">
+      <a routerLink="/blogposts/{{post.id}}">
+        <h4>{{post.title}}</h4>
+        <p>{{post.author}}</p>
+        <p>{{post.content}}</p>
+      </a>
+    </li>
+  </ul>
 </div>
-<div clsas="sidebar">
-  
+<div class="sidebar">
+  <h4>Local Resources</h4> 
+  <ul>
+    <li class="localResources" *ngFor="let resource of resources">
+      <a routerLink="/localresources/{{resource.id}}">
+        {{resource.name}} 
+      </a> 
+    </li>
+  </ul>
+  <h4>Coping Strategies</h4>
 </div>

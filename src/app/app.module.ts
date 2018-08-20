@@ -17,6 +17,9 @@ import { StoriesComponent } from './stories/stories.component';
 import { StoryDetailComponent } from './story-detail/story-detail.component';
 import { DisordersComponent } from './disorders/disorders.component';
 import { DisorderDetailComponent } from './disorder-detail/disorder-detail.component';
+import { BlogPostDetailComponent } from './blog-post-detail/blog-post-detail.component';
+import { LocalResourceDetailComponent } from './local-resource-detail/local-resource-detail.component';
+import { GeneralResourcesComponent } from './general-resources/general-resources.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { DisorderDetailComponent } from './disorder-detail/disorder-detail.compo
     StoriesComponent,
     StoryDetailComponent,
     DisordersComponent,
-    DisorderDetailComponent
+    DisorderDetailComponent,
+    BlogPostDetailComponent,
+    LocalResourceDetailComponent,
+    GeneralResourcesComponent
   ],
   imports: [
     BrowserModule,

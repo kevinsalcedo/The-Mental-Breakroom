@@ -9,6 +9,9 @@ import { StoriesComponent } from './stories/stories.component';
 import { StoryDetailComponent } from './story-detail/story-detail.component';
 import { DisordersComponent } from './disorders/disorders.component';
 import { DisorderDetailComponent } from './disorder-detail/disorder-detail.component';
+import { BlogPostDetailComponent } from './blog-post-detail/blog-post-detail.component';
+import { LocalResourceDetailComponent } from './local-resource-detail/local-resource-detail.component';
+import { GeneralResourcesComponent } from './general-resources/general-resources.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,7 +21,10 @@ const routes: Routes = [
   { path: 'stories', component: StoriesComponent },
   { path: 'stories/:id', component: StoryDetailComponent},
   { path: 'disorders', component: DisordersComponent },
-  { path: 'disorders/:id', component: DisorderDetailComponent}
+  { path: 'disorders/:id', component: DisorderDetailComponent },
+  { path: 'blogposts/:id', component: BlogPostDetailComponent },
+  { path: 'localresources/:id', component: LocalResourceDetailComponent },
+  { path: 'resources', component: GeneralResourcesComponent }
 ];
 
 @NgModule({

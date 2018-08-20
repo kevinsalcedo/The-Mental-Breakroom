@@ -8,20 +8,7 @@
 </div>
 <div class="listings">
   <table>
-    <!--
-   <tr>
-      <td *ngFor="let disorder of disorder_list">
-        <a routerLink="/disorders/{{disorder.id}}">
-          <div class="disorderListing">
-            <span class="badge">
-              <h3>{{disorder.name}}</h3>
-            </span>
-          </div>
-        </a>        
-      </td>
-    </tr>
-    -->
-    <tr *ngFor="let row of disorder_grid">
+   <tr *ngFor="let row of disorder_grid">
       <td *ngFor="let disorder of row">
         <a routerLink="/disorders/{{disorder.id}}">
           <div class="disorderListing">
