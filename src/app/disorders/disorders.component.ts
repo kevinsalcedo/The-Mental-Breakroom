@@ -11,9 +11,9 @@ export class DisordersComponent implements OnInit {
 
   private disorder_list: Array<object> = [];
   private disorder_grid = [];
-  private sortOrder = "asc";
+  private sortOrder = 'asc';
 
-  constructor(private apiService: ApiService) { } 
+  constructor(private apiService: ApiService) { }
   ngOnInit() {
     this.getDisorders();
 
@@ -24,12 +24,11 @@ export class DisordersComponent implements OnInit {
 
   public getDisorders() {
     this.apiService.getDisorders().subscribe((data: Array<object>) => {
-      this.disorder_list = data.sort((a,b) => a['name'] < b['name'] ? -1 : 1); 
+      this.disorder_list = data.sort((a, b) => a['name'] < b['name'] ? -1 : 1);
 
       for (let i = 0; i < data.length; i += 4) {
         this.disorder_grid[this.disorder_grid.length] = data.slice(i, i + 4);
       }
     });
   }
-
 }

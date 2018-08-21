@@ -13,17 +13,17 @@ export class LocalResourceDetailComponent implements OnInit {
   private resource: object = {};
   private disorder: object = {};
 
-  constructor(private urlPath: Location, private apiService:ApiService) { }
+  constructor(private urlPath: Location, private apiService: ApiService) { }
 
   ngOnInit() {
-    this.resourceId = this.urlPath.path().replace('/localresources/','');
+    this.resourceId = this.urlPath.path().replace('/localresources/', '');
     this.getLocalResource(this.resourceId);
   }
 
   public getLocalResource(resourceId) {
     this.apiService.getLocalResource(this.resourceId).subscribe((resourceData: Array<object>) => {
       this.resource = resourceData;
-      this.disorderId = resourceData['disorder']
+      this.disorderId = resourceData['disorder'];
       this.getDisorder(this.disorderId);
     });
   }

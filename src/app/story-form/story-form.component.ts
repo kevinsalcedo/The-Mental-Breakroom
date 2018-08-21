@@ -23,8 +23,8 @@ export class StoryFormComponent implements OnInit {
       this.disorders = data;
     });
 
-    let savedName = this.nameService.getName();
-    if(savedName) {
+    const savedName = this.nameService.getName();
+    if (savedName) {
       this.model.author = savedName;
     }
   }
@@ -39,8 +39,8 @@ export class StoryFormComponent implements OnInit {
       disorder: this.model.disorder
     };
 
-    if (this.model.author != "") {
-      this.nameService.setName(this.model.author);       
+    if (this.model.author !== '') {
+      this.nameService.setName(this.model.author);
     }
 
     this.apiService.createStory(newStory).subscribe((response) => {

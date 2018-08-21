@@ -13,7 +13,7 @@ import { GetNameService } from '../get-name.service';
 export class PostFormComponent implements OnInit {
 
   model = new Post(1, '', '', Date.now(), 1, '');
-  private disorders:Array<object> = [];
+  private disorders: Array<object> = [];
 
   submitted = false;
 
@@ -23,9 +23,9 @@ export class PostFormComponent implements OnInit {
     this.apiService.getDisorders().subscribe((data: Array<object>) => {
       this.disorders = data;
     });
-  
-    let savedName = this.nameService.getName()
-    if(savedName) {
+
+    const savedName = this.nameService.getName();
+    if (savedName) {
       this.model.author = savedName;
     }
 
@@ -41,7 +41,7 @@ export class PostFormComponent implements OnInit {
       disorder: this.model.disorder
     };
 
-    if(this.model.author != "") {
+    if (this.model.author !== '') {
       this.nameService.setName(this.model.author);
     }
 

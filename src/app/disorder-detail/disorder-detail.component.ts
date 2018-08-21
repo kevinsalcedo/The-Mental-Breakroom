@@ -11,8 +11,8 @@ import { ApiService } from '../api.service';
 export class DisorderDetailComponent implements OnInit {
   disorderId = '-1';
   private disorder: object = {};
-  private posts:Array<object> = [];
-  private resources:Array<object> = [];
+  private posts: Array<object> = [];
+  private resources: Array<object> = [];
 
   constructor(private urlPath: Location, private apiService: ApiService) { }
 
@@ -33,13 +33,13 @@ export class DisorderDetailComponent implements OnInit {
 
   public getBlogPosts() {
     this.apiService.getBlogPosts().subscribe((postList: Array<object>) => {
-      this.posts = postList.filter(post => post['disorder'] == this.disorderId);
+      this.posts = postList.filter(post => post['disorder'] === this.disorderId);
     });
   }
 
   public getLocalResources() {
     this.apiService.getLocalResources().subscribe((resourceList: Array<object>) => {
-      this.resources = resourceList.filter(resource => resource['disorder'] == this.disorderId);
+      this.resources = resourceList.filter(resource => resource['disorder'] === this.disorderId);
     });
   }
 
