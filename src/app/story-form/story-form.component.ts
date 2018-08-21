@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Story } from '../story';
 import { ApiService } from '../api.service';
 import { Router } from '@angular/router';
+import { GetNameService } from '../get-name.service';
 
 @Component({
   selector: 'app-story-form',
@@ -15,12 +16,17 @@ export class StoryFormComponent implements OnInit {
 
   submitted = false;
 
-  constructor(private router: Router, private apiService: ApiService) {}
+  constructor(private nameService: GetNameService, private router: Router, private apiService: ApiService) {}
 
   ngOnInit() {
     this.apiService.getDisorders().subscribe((data: Array<object>) => {
       this.disorders = data;
     });
+
+    let savedName = this.nameService.getName();
+    if(savedName) {
+      this.model.author = savedName;
+    }
   }
 
   onSubmit() {
@@ -33,8 +39,12 @@ export class StoryFormComponent implements OnInit {
       disorder: this.model.disorder
     };
 
+    if (this.model.author != "") {
+      this.nameService.setName(this.model.author);       
+    }
+
     this.apiService.createStory(newStory).subscribe((response) => {
-      this.router.navigateByUrl(`/disorders/${newStory.disorder}`);
+      this.router.navigateByUrl(`/stories`);
     });
 
   }

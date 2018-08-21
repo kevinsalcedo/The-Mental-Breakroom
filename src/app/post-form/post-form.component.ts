@@ -3,6 +3,7 @@ import { Post } from '../post';
 import { ApiService } from '../api.service';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { GetNameService } from '../get-name.service';
 
 @Component({
   selector: 'app-post-form',
@@ -16,12 +17,18 @@ export class PostFormComponent implements OnInit {
 
   submitted = false;
 
-  constructor(private router: Router, private apiService: ApiService, private __location: Location)  {}
+  constructor(private nameService: GetNameService, private router: Router, private apiService: ApiService, private __location: Location)  {}
 
   ngOnInit() {
     this.apiService.getDisorders().subscribe((data: Array<object>) => {
       this.disorders = data;
     });
+  
+    let savedName = this.nameService.getName()
+    if(savedName) {
+      this.model.author = savedName;
+    }
+
   }
 
   onSubmit() {
@@ -33,6 +40,10 @@ export class PostFormComponent implements OnInit {
       author: this.model.author,
       disorder: this.model.disorder
     };
+
+    if(this.model.author != "") {
+      this.nameService.setName(this.model.author);
+    }
 
     this.apiService.createBlogPost(newPost).subscribe((response) => {
       console.log(response);
