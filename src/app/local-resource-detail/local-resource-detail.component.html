@@ -1,3 +1,27 @@
-<p>
-  local-resource-detail works!
-</p>
+<div class="header" *ngIf="resource">
+  <h1>
+    {{resource.name}}
+  </h1>
+</div>
+<div class="content" *ngIf="resource">
+  <div class="headshot">
+    <div *ngIf="resource.img_url; then withImage else withoutImage"></div>
+    <ng-template #withImage>
+      <img class="photo" src="{{resource.img_url}}">
+    </ng-template>
+    <ng-template #withoutImage>
+      <h2 class="warning">No Image Available</h2>
+    </ng-template>
+  </div> 
+  <div class="info">
+    <h2>
+      {{resource.name}}
+    </h2>
+    <h3><span class="sectionHead">Specialty: </span>{{disorder.name}}</h3>
+    <h3><span class="sectionHead">Address: </span>{{resource.address}}</h3>
+    <h3><span class="sectionHead">Phone: </span>{{resource.phone}}</h3>
+    <a href="{{resource.url}}">
+      <h4>More Information & Reviews</h4>
+    </a>
+  </div>
+</div>

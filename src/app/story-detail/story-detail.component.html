@@ -2,7 +2,7 @@
   <h1>
     {{story.title}}
   </h1>
-  <div *ngIf="story.author; then withAuthor else withoututhor"></div>
+  <div *ngIf="story.author; then withAuthor else withoutAuthor"></div>
 <ng-template #withAuthor>
   <h2>{{story.author}}</h2> 
 </ng-template>
